@@ -1,7 +1,7 @@
 import React from 'react';
 
 import homeBodyBG from '../../assets/homeBodyBG.png';
-import backgroundImage from '../../assets/homeBG2.png';
+import backgroundImage from '../../assets/homeBG.png';
 import homeFooterBG from '../../assets/homeFooterBG.svg';
 import homeConclusionBG from '../../assets/homeConclusionBG.png';
 
