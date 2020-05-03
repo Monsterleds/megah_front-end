@@ -1,19 +1,25 @@
 import styled from 'styled-components';
 
-import backgroundImage from '../../assets/homeBG.png';
-
 export const Container = styled.div`
   height: 100%;
-  background-size: 100%;
-  background-image: url(${backgroundImage});
-  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
 `;
 
 export const Texts = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 1500px;
+`;
+
+export const BackgroundImage = styled.div`
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
 `;
 
 export const Content = styled.div`
@@ -71,6 +77,7 @@ export const Content = styled.div`
       }
     }
   }
+
   footer {
     height: 100vh;
     display: flex;
@@ -78,7 +85,7 @@ export const Content = styled.div`
     justify-content: flex-end;
 
     p {
-      color: #fff;
+      color: #fefefe;
       margin: 0px 0px 10px 10px;
     }
 
@@ -94,7 +101,6 @@ export const IntroductoryText = styled.div`
   margin: 100px 0px 0px 100px;
   max-width: 550px;
   width: 100%;
-  height: 350px;
 
   h1 {
     color: #212121;
@@ -124,18 +130,18 @@ export const SubTitle = styled.p`
 `;
 
 export const ContentText = styled.p`
-  width: 60%;
+  width: 90%;
   color: #5B5B5BBD;
   line-height: 26px;
   margin: 20px 0px 15px 0px;
 `;
 
 export const BodyText = styled.div`
+  margin-top: 400px;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  width: 100%;
-  height: 500px;
+  align-items: center;
 
   h1 {
     color: #212121;
@@ -147,15 +153,25 @@ export const BodyText = styled.div`
   }
 
   img {
-    height: 100%;
+    width: 60%;
   }
 `;
 
 export const ConclusionText = styled.div`
-  margin: 100px 0px 0px 100px;
-  max-width: 550px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 100px 0px -200px 0px;
   width: 100%;
-  height: 350px;
+
+  img {
+    width: 45%;
+  }
+
+  div {
+    margin-left: 100px;
+  }
 
   h1 {
     color: #212121;
