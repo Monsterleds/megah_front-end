@@ -78,7 +78,6 @@ export const Container = styled.div`
             border-radius: 5px;
             background: #FFFFFF;
             box-shadow: 0px 3px 6px #51ACEF;
-            opacity: 1;
         }
 
         img {
@@ -120,7 +119,7 @@ export const DropContainer = styled.div.attrs({
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 110px;
+    height: 180px;
     border: 2px dashed #ddd;
     border-radius: 16px;
     margin-bottom: 20px;
@@ -145,4 +144,9 @@ export const SubTitlePhoto = styled.p`
   justify-content: center;
   align-items: center;
   padding: 15px 0;
+`;
+
+export const InputFile = styled.input`
+    position: absolute;
+    opacity: 0%;
 `;

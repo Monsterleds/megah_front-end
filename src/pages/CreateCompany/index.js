@@ -5,7 +5,7 @@ import { MdInsertPhoto } from 'react-icons/md';
 import { Form, Input } from '@rocketseat/unform';
 import api from '../../services/api';
 import {
-  Container, Wrapped, Nav, SubmitButton, SubTitlePhoto, DropContainer,
+  Container, Wrapped, Nav, SubmitButton, InputFile, SubTitlePhoto, DropContainer,
 } from './styles';
 
 import pencil from '../../assets/pencil.svg';
@@ -14,10 +14,19 @@ export default function CreateCompany() {
   const [dataImage, setDataImage] = useState({});
 
   async function handleSubmit(data) {
-    await api.post('/ALGO', {
+    console.log({
+      data,
+      dataImage,
+    });
+
+    /* await api.post('/ALGO', {
       data,
       dataImage, // Dados da imagem
-    });
+    }); */
+  }
+
+  function handleChangeImage(e) {
+    console.log(e.target.value);
   }
 
   function renderDragMessage(isDragActive, isDragReject) {
@@ -80,7 +89,7 @@ export default function CreateCompany() {
                 isDragReject={isDragReject}
               >
                 {renderDragMessage(isDragActive, isDragReject)}
-                <Input {...getInputProps()} id="img" name="img_url" type="file" />
+                <input {...getInputProps()} id="img" name="img_url" type="file" />
               </DropContainer>
             )}
           </Dropzone>
