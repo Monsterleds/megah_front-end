@@ -1,11 +1,32 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Container, FormContainer } from './styles';
+import logo from '../../assets/gripplogo.png'
+import { Link } from 'react-router-dom';
+import {Form, Input} from '@rocketseat/unform'
 
-export default function SignIn() {
+function Login() {
   return (
     <Container>
-      <h1>Hello World</h1>
+    <FormContainer>
+        <img alt="Logo-gripp" src={logo}/>
+
+          <Form>
+        
+            <Input id="email" name="email" placeholder="Email"  type="text" />
+        
+                   
+            <Input id="password" name="password" class="clientHands" placeholder="Senha" title="Digite sua senha" type="password" />
+       
+         
+            <button type="submit">Entrar</button>
+          
+        <p>Não é cadastrado? <Link class="linkRegister"><strong>Cadastre-se Agora!</strong></Link></p>
+        </Form>
+     
+    </FormContainer>
     </Container>
-  );
+    );
 }
+
+export default Login;
