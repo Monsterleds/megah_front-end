@@ -89,7 +89,7 @@ export default function CreateCompany() {
                 isDragReject={isDragReject}
               >
                 {renderDragMessage(isDragActive, isDragReject)}
-                <input {...getInputProps()} id="img" name="img_url" type="file" />
+                <input {...getInputProps()} id="img" name="img_url" type="file" onChange={} />
               </DropContainer>
             )}
           </Dropzone>
