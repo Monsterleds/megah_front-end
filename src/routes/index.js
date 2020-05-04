@@ -5,15 +5,19 @@ import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
+import CreateCompany from '../pages/CreateCompany';
+import Index from '../pages/Index';
 
 export default function routes() {
   return (
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/signin" component={SignIn} />
-          <Route path="/signup" component={SignUp} />
-        </Switch>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/signin" component={SignIn} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/company/create" component={CreateCompany} />
+        <Route path="/home" component={Index} />
+      </Switch>
+    </BrowserRouter>
   );
 }

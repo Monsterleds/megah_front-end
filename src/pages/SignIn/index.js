@@ -1,11 +1,34 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Link } from 'react-router-dom';
+import { Form, Input } from '@rocketseat/unform';
+import api from '../../services/api';
+import { Container, FormContainer } from './styles';
+import logo from '../../assets/logoCadastro.svg';
 
-export default function SignIn() {
+export default function Login() {
+  async function handleSubmit(e) {
+    /* Dados da requisição */
+    await api.post('/ALGO', {
+      name: e.name,
+      password: e.password,
+    });
+  }
+
   return (
     <Container>
-      <h1>Hello World</h1>
+      <FormContainer>
+        <img alt="Logo-gripp" src={logo} />
+        <Form onSubmit={handleSubmit}>
+          <Input id="email" name="email" placeholder="Email" type="text" />
+          <Input id="password" name="password" class="clientHands" placeholder="Senha" title="Digite sua senha" type="password" />
+          <button type="submit">Entrar</button>
+          <p>
+            Não é cadastrado?
+            <Link to="signup"><strong>Cadastre-se Agora!</strong></Link>
+          </p>
+        </Form>
+      </FormContainer>
     </Container>
   );
 }
