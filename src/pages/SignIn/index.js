@@ -9,8 +9,9 @@ import logo from '../../assets/logoCadastro.svg';
 export default function Login() {
   async function handleSubmit(e) {
     /* Dados da requisição */
-    await api.post('/ALGO', {
-      name: e.name,
+    console.log(e.password);
+    await api.post('/sessions', {
+      email: e.email,
       password: e.password,
     });
   }

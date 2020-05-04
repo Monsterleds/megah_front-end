@@ -67,13 +67,12 @@ export default function SignUp() {
       return alert('Selecione CPF ou CNPJ.');
     }
 
-    await api.post('/ALGO', {
-      /* os dados da requisição */
-      name,
-      password,
-      registerNumber, // Numero do CPF/CNPJ
-      boolRegister, // 0 CPF ou 1 CNPJ
+    await api.post('/users', {
+      username: name,
       email,
+      password,
+      CPForCNPJ: registerNumber,
+      PJ: boolRegister,
     });
 
     return console.log(name, password, registerNumber, boolRegister, email);
