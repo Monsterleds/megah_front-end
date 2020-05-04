@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
 import api from '../../services/api';
@@ -29,6 +30,35 @@ export default function Login() {
           </p>
         </Form>
       </FormContainer>
+=======
+import { Container, FormContainer } from './styles';
+import logo from '../../assets/gripplogo.png'
+import { Link } from 'react-router-dom';
+import {Form, Input} from '@rocketseat/unform'
+
+function Login() {
+  return (
+    <Container>
+    <FormContainer>
+        <img alt="Logo-gripp" src={logo}/>
+
+          <Form>
+        
+            <Input id="email" name="email" placeholder="Email"  type="text" />
+        
+                   
+            <Input id="password" name="password" class="clientHands" placeholder="Senha" title="Digite sua senha" type="password" />
+       
+         
+            <button type="submit">Entrar</button>
+          
+        <p>Não é cadastrado? <Link class="linkRegister"><strong>Cadastre-se Agora!</strong></Link></p>
+        </Form>
+     
+    </FormContainer>
+>>>>>>> ee15df13ccaeae07aff0def25fa7f79bd02a7e09
     </Container>
-  );
+    );
 }
+
+export default Login;
