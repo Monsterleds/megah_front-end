@@ -6,6 +6,8 @@ import Home from '../pages/Home';
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import CreateCompany from '../pages/CreateCompany';
+import CreateProject from '../pages/CreateProject';
+
 
 export default function routes() {
   return (
@@ -15,7 +17,9 @@ export default function routes() {
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
           <Route path="/companies/create" component={CreateCompany} isPrivate />
-          
+          <Route path="/projects/create" component={CreateProject} isPrivate />
+
+
         </Switch>
       </BrowserRouter>
   );
