@@ -7,6 +7,8 @@ import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import CreateCompany from '../pages/CreateCompany';
 import Index from '../pages/Index';
+import templateMain from '../pages/template/Main';
+import templateProduct from '../pages/template/Product';
 
 export default function routes() {
   return (
@@ -17,6 +19,9 @@ export default function routes() {
         <Route path="/signup" component={SignUp} />
         <Route path="/company/create" component={CreateCompany} />
         <Route path="/home" component={Index} />
+        <Route path="/web/:id_company/:id" exact component={templateMain} />
+        <Route path="/:id_company/:id_web/product/:id" exact component={templateProduct} />
+
       </Switch>
     </BrowserRouter>
   );
