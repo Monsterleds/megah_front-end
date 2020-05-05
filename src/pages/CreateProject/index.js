@@ -15,6 +15,10 @@ class CreateProject extends React.Component {
     }
   }
   
+
+  handleSubimt(){
+
+  }
   render(){
   
 
@@ -42,7 +46,7 @@ class CreateProject extends React.Component {
           <p>Cor Principal:</p>
         <button id="blue" onClick={function(e){
           e.preventDefault()
-          console.log('blue')
+          
         }}></button>
         <button id="red" onClick={function(e){
           e.preventDefault()
