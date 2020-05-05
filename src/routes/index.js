@@ -7,6 +7,7 @@ import Home from '../pages/Home';
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import CreateCompany from '../pages/CreateCompany';
+import CreateProject from '../pages/CreateProject';
 import Index from '../pages/Index';
 
 function CustomRoute({ isPrivate, ...rest }) {
@@ -32,6 +33,7 @@ export default function routes() {
       <CustomRoute path="/signin" component={SignIn} />
       <CustomRoute path="/signup" component={SignUp} />
       <CustomRoute path="/company/create" component={CreateCompany} isPrivate />
+      <CustomRoute path="/project/create" component={CreateProject} isPrivate />
       <CustomRoute path="/home" component={Index} isPrivate />
       <CustomRoute path="/s" component={() => <h1>404 Página não encontrada, verifique a url e tente novamente.</h1>} />
     </Switch>

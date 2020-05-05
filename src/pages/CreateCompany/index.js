@@ -3,6 +3,7 @@ import Dropzone from 'react-dropzone';
 
 import { MdInsertPhoto } from 'react-icons/md';
 import { Form, Input } from '@rocketseat/unform';
+import history from '../../services/history';
 import api from '../../services/api';
 import {
   Container, Wrapped, Nav, SubmitButton, SubTitlePhoto, DropContainer,
@@ -13,11 +14,18 @@ import pencil from '../../assets/pencil.svg';
 export default function CreateCompany() {
   const [dataImage, setDataImage] = useState({});
 
-  function handleSubmit(data) {
-    /* await api.post('/ALGO', {
-      data,
-      dataImage, // Dados da imagem
-    }); */
+  async function handleSubmit(data) {
+    try {
+      await api.post('/companies', {
+        name: data.name,
+        description: data.name,
+        img_url: null,
+      // dataImage, // Dados da imagem
+      });
+    } catch (err) {
+      alert('Criado com sucesso');
+      return history.push('/home');
+    }
   }
 
   function handleDragMessage(data) {

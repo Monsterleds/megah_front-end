@@ -3,7 +3,6 @@ import React, { useContext } from 'react';
 
 import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
-import history from '../../services/history';
 import { Context } from '../../routes/context/AuthContext';
 import api from '../../services/api';
 import { Container, FormContainer } from './styles';
