@@ -1,15 +1,21 @@
 import React from 'react';
 
+import { Router } from 'react-router-dom';
 import GlobalStyles from './styles/global';
 
-import Routes from './routes'
+import Routes from './routes';
+import history from './services/history';
+
+import { AuthProvider } from './routes/context/AuthContext';
 
 function App() {
   return (
-    <>
-      <Routes />
-      <GlobalStyles />
-    </>
+    <AuthProvider>
+      <Router history={history}>
+        <Routes />
+        <GlobalStyles />
+      </Router>
+    </AuthProvider>
   );
 }
 

@@ -25,7 +25,7 @@ export default function Home() {
     <Container>
       <Content>
         <BackgroundImage>
-          <img src={backgroundImage} alt="" />
+          <img src={backgroundImage} alt="Background" />
         </BackgroundImage>
         <header>
           <nav>
@@ -46,7 +46,7 @@ export default function Home() {
             <Link to="/signup"><button>Começar Agora!</button></Link>
           </IntroductoryText>
           <BodyText>
-            <img src={homeBodyBG} alt="Imagem body" />
+            <img src={homeBodyBG} alt="BodyImage" />
             <div>
               <h1>Plataforma com rapidez e segurança</h1>
               <ContentText>Não se preocupe com a segurança da sua plataforma online, nossa equipe de engenheiros e arquitetos já cuidou de tudo isso para você, de forma que não terá que se preocupar com nada em programação ou qualquer preocupação.</ContentText>
@@ -59,12 +59,12 @@ export default function Home() {
               <ContentText>Um dos maiores pontos para se ter um negócio de sucesso, tanto no ambiente físico quanto o online, é a medição das métricas, saber onde precisa melhorar, como melhorar, qual horário da mais movimento e qual produto da mais lucro.</ContentText>
               <Link to="/signup"><button>Iniciar</button></Link>
             </div>
-            <img src={homeConclusionBG} alt="" />
+            <img src={homeConclusionBG} alt="SectionBackground" />
           </ConclusionText>
         </Texts>
         <footer>
           <p>Gripp. Copyright © 2020</p>
-          <img src={homeFooterBG} alt="" />
+          <img src={homeFooterBG} alt="FooterBackground" />
         </footer>
       </Content>
     </Container>

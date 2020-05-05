@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
+import history from '../../services/history';
+
 import logo from '../../assets/logoCadastro.svg';
 import user from '../../assets/user.svg';
 import groupImage from '../../assets/group.svg';
@@ -67,16 +69,15 @@ export default function SignUp() {
       return alert('Selecione CPF ou CNPJ.');
     }
 
-    await api.post('/ALGO', {
-      /* os dados da requisição */
-      name,
-      password,
-      registerNumber, // Numero do CPF/CNPJ
-      boolRegister, // 0 CPF ou 1 CNPJ
+    await api.post('/users', {
+      username: name,
       email,
+      password,
+      CPForCNPJ: registerNumber,
+      PJ: boolRegister,
     });
 
-    return console.log(name, password, registerNumber, boolRegister, email);
+    return history.push('/signin');
   }
 
   function handleInputChangeName(e) {

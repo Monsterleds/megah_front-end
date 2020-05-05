@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
 
 import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
+import history from '../../services/history';
+import { Context } from '../../routes/context/AuthContext';
 import api from '../../services/api';
 import { Container, FormContainer } from './styles';
 import logo from '../../assets/logoCadastro.svg';
 
 export default function Login() {
+  const { authenticated, handleLogin } = useContext(Context);
+
   async function handleSubmit(e) {
-    /* Dados da requisição */
-    await api.post('/ALGO', {
-      name: e.name,
+    const userSession = {
+      email: e.email,
       password: e.password,
-    });
+    };
+
+    await handleLogin(userSession);
   }
 
   return (

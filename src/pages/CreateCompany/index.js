@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Dropzone from 'react-dropzone';
 
 import { MdInsertPhoto } from 'react-icons/md';
 import { Form, Input } from '@rocketseat/unform';
 import api from '../../services/api';
 import {
-  Container, Wrapped, Nav, SubmitButton, InputFile, SubTitlePhoto, DropContainer,
+  Container, Wrapped, Nav, SubmitButton, SubTitlePhoto, DropContainer,
 } from './styles';
 
 import pencil from '../../assets/pencil.svg';
@@ -13,22 +13,23 @@ import pencil from '../../assets/pencil.svg';
 export default function CreateCompany() {
   const [dataImage, setDataImage] = useState({});
 
-  async function handleSubmit(data) {
-    console.log({
-      data,
-      dataImage,
-    });
-
+  function handleSubmit(data) {
     /* await api.post('/ALGO', {
       data,
       dataImage, // Dados da imagem
     }); */
   }
 
-  function handleChangeImage(e) {
-    console.log(e.target.value);
+  function handleDragMessage(data) {
+    if (data) {
+      return (
+        <>
+          <MdInsertPhoto size="50px" color="#DDDDDD" />
+          <SubTitlePhoto>{dataImage[0].name}</SubTitlePhoto>
+        </>
+      );
+    }
   }
-
   function renderDragMessage(isDragActive, isDragReject) {
     if (isDragReject) {
       return <SubTitlePhoto type="error">Não suportado</SubTitlePhoto>;
@@ -38,12 +39,18 @@ export default function CreateCompany() {
       return <SubTitlePhoto type="success">Solte a imagem aqui</SubTitlePhoto>;
     }
 
-    return (
-      <>
-        <MdInsertPhoto size="50px" color="#DDDDDD" />
-        <SubTitlePhoto>Adicionar foto</SubTitlePhoto>
-      </>
-    );
+    try {
+      if (dataImage[0].name) {
+        return handleDragMessage(1);
+      }
+    } catch (err) {
+      return (
+        <>
+          <MdInsertPhoto size="50px" color="#DDDDDD" />
+          <SubTitlePhoto>Adicionar foto</SubTitlePhoto>
+        </>
+      );
+    }
   }
 
   return (

@@ -29,7 +29,7 @@ export const Nav = styled.div`
         display:flex;
         justify-content: center;
         align-items: center;
-        margin: 0px 10px;
+        margin-right: 50px;
         color:white;
         font-family: roboto, bold;
     }
@@ -69,6 +69,7 @@ export const Container = styled.div`
         background: rgb(250,250,250);
         padding: 30px 20px;
         border-radius: 5px;
+        box-shadow: 0px 3px 6px #00000042;
         
         input{
             width: 90%;
@@ -83,14 +84,14 @@ export const Container = styled.div`
         img {
             position: absolute;
             width: 25px;
-            margin: 15px 0px 0px 13px;
+            margin: 28px 0px 0px 13px;
         }
 
         div {
             width: 90%;
             display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
+            flex-direction: column;
+            justify-content: center;
         }
     }
 `;
@@ -111,6 +112,8 @@ export const InputImage = styled.input`
     height: 100px;
 `;
 
+// export const Dropzone = styled.
+
 export const DropContainer = styled.div.attrs({
   className: 'dropzone',
 })`
@@ -123,14 +126,13 @@ export const DropContainer = styled.div.attrs({
     border: 2px dashed #ddd;
     border-radius: 16px;
     margin-bottom: 20px;
-  
     cursor: pointer;
-  
     transition: height 0.2 ease;
   
     ${(props) => props.isDragActive && dragActive};
     ${(props) => props.isDragReject && dragReject};
   `;
+
 
 const messageColors = {
   default: '#999',
