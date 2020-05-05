@@ -9,6 +9,8 @@ import SignUp from '../pages/SignUp';
 import CreateCompany from '../pages/CreateCompany';
 import CreateProject from '../pages/CreateProject';
 import Index from '../pages/Index';
+import templateMain from '../pages/template/Main';
+import templateProduct from '../pages/template/Product';
 
 function CustomRoute({ isPrivate, ...rest }) {
   const { authenticated, handleToken } = useContext(Context);
@@ -36,6 +38,9 @@ export default function routes() {
       <CustomRoute path="/project/create" component={CreateProject} isPrivate />
       <CustomRoute path="/home" component={Index} isPrivate />
       <CustomRoute path="/s" component={() => <h1>404 Página não encontrada, verifique a url e tente novamente.</h1>} />
+      <Route path="/web/:id_company/:id" exact component={templateMain} />
+      <Route path="/:id_company/:id_web/product/:id" exact component={templateProduct} />
+
     </Switch>
   );
 }
