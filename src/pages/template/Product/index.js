@@ -33,10 +33,6 @@ class Product extends React.Component {
       description: description,
       product: reponse.data
     });
-
-    console.log(this.state.color)
-    
-
   }
   
   render(){
