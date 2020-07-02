@@ -1,68 +1,102 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/56271517/86404849-be25a880-bc86-11ea-80f9-e1417b98a963.png"> </img>
+</p>
+<br>
 
-## Available Scripts
+## Sobre o projeto
+Gripp é uma aplicação desenvolvida durante o MegaHack2020, essa idéia do projeto consiste em que o usuário consiga construir seu próprio website e-commerce baseado nos templates disponíveis no site.
+<br><br>
+![projeto](https://user-images.githubusercontent.com/56271517/86403455-22933880-bc84-11ea-8f5c-165b6b76677e.png)
+<br><br>
+## Por que?
+Muitas vezes, o indivíduo quer ampliar seus negócios, evoluindo para o mercado digital, mas não tem tempo ou condições para contratar uma equipe focada nos mesmos.
+Logo, o Gripp surge com a ideia de quebrar essa barreira, fazendo com que o usuário consiga vender seus produtos da maneira desejada.
+<br><br>
+## Funcionalidades
+- Usuário
 
-In the project directory, you can run:
+     - Cadastrar um novo Usuário
+     - Atualizar o usuário
+     - Deletar um novo usuário
 
-### `yarn start`
+- Projetos
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+     - Cadastrar projetos
+     - Deletar projetos
+     - Alterar projetos
+     - Visualizar dados dos projetos, como nome, descrição e o valor do projeto
+     
+## Começando
+### Pré requisitos
+Ter NPM ou yarn baixado na sua maquina.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Instalando
 
-### `yarn test`
+#### Clonando o repositório
+```
+$ git clone https://github.com/Monsterleds/megah_front-end
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+$ cd megah_front_end
+```
 
-### `yarn build`
+#### Instalando as dependências do Back-end
+(Em breve)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!--
+```
+$ cd backend
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```
+$ yarn
+```
+_Ou_
+```
+$ npm install
+```
+-->
+#### Instalando as dependências do Front-end
+```
+$ cd frontend
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ yarn
+```
+_Ou_
+```
+$ npm install
+```
 
-### `yarn eject`
+## Conectando ao Server
+(em breve)
+<!-- Para iniciar, primeiramente você precisa startar o server do Back-end, quando estiver na pasta, execute o comando:
+```
+$ yarn start
+```
+_Ou_
+```
+$ npm start
+```
+-->
+## Rodando
+#### Web
+```
+$ cd frontend
+```
+```
+$ yarn start
+```
+_Ou_
+```
+$ npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Construído com: 
+- [Axios](https://github.com/axios/axios) - Cliente HTTP
+- [Intl](https://github.com/andyearnshaw/Intl.js/) - Cifrão R$
+- [React JS](https://github.com/facebook/create-react-app) - React JS
+- [Express](https://expressjs.com/pt-br/) - Bibliotecas básicas
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
