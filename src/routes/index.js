@@ -34,9 +34,9 @@ export default function routes() {
       <CustomRoute path="/" component={Home} exact />
       <CustomRoute path="/signin" component={SignIn} />
       <CustomRoute path="/signup" component={SignUp} />
-      <CustomRoute path="/company/create" component={CreateCompany} isPrivate />
-      <CustomRoute path="/project/create" component={CreateProject} isPrivate />
-      <CustomRoute path="/home" component={Index} isPrivate />
+      <CustomRoute path="/company/create" component={CreateCompany} />
+      <CustomRoute path="/project/create" component={CreateProject} />
+      <CustomRoute path="/home" component={Index} />
       <CustomRoute path="/s" component={() => <h1>404 Página não encontrada, verifique a url e tente novamente.</h1>} />
       <Route path="/web/:id_company/:id" exact component={templateMain} />
       <Route path="/:id_company/:id_web/product/:id" exact component={templateProduct} />

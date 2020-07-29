@@ -16,14 +16,22 @@ export default function CreateCompany() {
 
   async function handleSubmit(data) {
     try {
+      /** Converte os dados do tipo do input para o multipart/form-data,
+       *  assim tornando a adição de imagens possível */
+      const fd = new FormData();
+
+      fd.append('action', 'ADD');
+      fd.append('param', 0);
+      fd.append('secondParam', 0);
+      fd.append('file', dataImage[0]);
+
       await api.post('/companies', {
         name: data.name,
         description: data.name,
         img_url: null,
-      // dataImage, // Dados da imagem
+        fd, // Dados da imagem
       });
     } catch (err) {
-      alert('Criado com sucesso');
       return history.push('/home');
     }
   }
