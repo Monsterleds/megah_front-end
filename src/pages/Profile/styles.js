@@ -17,15 +17,26 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 55vw;
-    height: calc(55vw + 28px);
+    width: 60vw;
+    height: 80%;
+    min-height: 590px;
     background-color: #fff;
     box-shadow: 2px 2px 6px #4A7BEE;
     padding: 16px 24px;
     border-radius: 32px;
 
-    label > input {
-      display: none;
+    @media only screen and (max-width: 735px) {
+      width: 90vw;
+    }
+
+    label {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      input {
+        display: none;
+      }
     }
 
     button {
@@ -49,13 +60,15 @@ export const ProfileContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 180px;
-  width: 180px;
+  max-width: 180px;
+  width: 30vw;
+  max-height: 180px;
+  height: 30vw;
   border-radius: 100%;
   overflow: hidden;
   cursor: pointer;
   transition: 0.2s;
-  
+
   div {
     position: absolute;
     width: 100%;
@@ -98,6 +111,10 @@ export const FormWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+
+  @media only screen and (max-width: 735px) {
+    flex-direction: column;
+  }
 `;
 
 export const InputsContainer = styled.div`
@@ -106,6 +123,10 @@ export const InputsContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+
+  & + div {
+    margin: 16px 0;
+  }
 
   div {
     display: flex;
