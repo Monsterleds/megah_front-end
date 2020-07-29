@@ -31,7 +31,7 @@ export const Menu = styled.div.attrs((props) => ({
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;
+  width: 360px;
   height: 100vh;
   background-color: #1A469F;
   padding: 0px 16px;
@@ -41,6 +41,7 @@ export const Menu = styled.div.attrs((props) => ({
     visibility: hidden;
     z-index: 10;
     top: 0;
+    width: 300px;
     left: -300px;
     transition: 0.5s;
 

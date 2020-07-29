@@ -13,10 +13,12 @@ export const Container = styled.header`
     align-items: center;
     justify-content: space-between;
 
-    li {
+    li > a {
       display: flex;
       align-items: center;
       cursor: pointer;
+      color: #FCFCFCF5;
+      transition: 0.2s;
     }
   }
 
@@ -38,11 +40,9 @@ export const Li = styled.li.attrs((props) => ({
 }))`
   cursor: pointer;
   font-size: 16px;
-  transition: 0.2s;
-  color: #FCFCFCF5;
   opacity: 70%;
 
-  :hover {
+  a:hover {
     color: ${darken(0.2, '#FCFCFCF5')};
   }
 
@@ -50,7 +50,7 @@ export const Li = styled.li.attrs((props) => ({
     font-weight: bold;
     opacity: 1;
 
-    :hover {
+    a:hover {
       color: #FCFCFCF5;
     }
   `};
