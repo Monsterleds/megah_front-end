@@ -31,7 +31,7 @@ export const Menu = styled.div.attrs((props) => ({
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
+  width: 400px;
   height: 100vh;
   background-color: #1A469F;
   padding: 0px 16px;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Container, Li } from './styles';
 
@@ -8,12 +9,14 @@ function Header() {
   return (
     <Container>
       <ul>
-        <Li isSelected={urlAtual === 'projects' && true}>Projetos</Li>
+        <Li isSelected={urlAtual === 'projects' && true}><Link to="/projects">Projetos</Link></Li>
         <Li isSelected={urlAtual === 'batata' && true}>
-          User
-          <div>
-            <p>foto</p>
-          </div>
+          <Link to="/projects">
+            User
+            <div>
+              <p>foto</p>
+            </div>
+          </Link>
         </Li>
       </ul>
 
