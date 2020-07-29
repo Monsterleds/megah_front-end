@@ -23,7 +23,11 @@ export default createGlobalStyle`
     font-size: 16px;
   }
 
-  button {
+  li {
+    list-style: none;
+  }
+
+  button, a {
     cursor: pointer;
   }
 `;

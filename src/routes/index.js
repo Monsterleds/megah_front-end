@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 import { Context } from './context/AuthContext';
 
-import Home from '../pages/Home';
+import Projects from '../pages/Projects';
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import CreateCompany from '../pages/CreateCompany';
@@ -31,15 +31,16 @@ function CustomRoute({ isPrivate, ...rest }) {
 export default function routes() {
   return (
     <Switch>
-      <CustomRoute path="/" component={Home} exact />
-      <CustomRoute path="/signin" component={SignIn} />
-      <CustomRoute path="/signup" component={SignUp} />
-      <CustomRoute path="/company/create" component={CreateCompany} />
-      <CustomRoute path="/project/create" component={CreateProject} />
-      <CustomRoute path="/home" component={Index} />
-      <CustomRoute path="/s" component={() => <h1>404 Página não encontrada, verifique a url e tente novamente.</h1>} />
+      <CustomRoute path="/" component={Index} exact />
+      <CustomRoute path="/signin" component={SignIn} exact />
+      <CustomRoute path="/signup" component={SignUp} exact />
+      <CustomRoute path="/company/create" component={CreateCompany} exact />
+      <CustomRoute path="/project/create" component={CreateProject} exact />
+      <CustomRoute path="/projects" component={Projects} exact />
       <Route path="/web/:id_company/:id" exact component={templateMain} />
       <Route path="/:id_company/:id_web/product/:id" exact component={templateProduct} />
+
+      <CustomRoute path="/" component={() => <h1>404 Página não encontrada, verifique a url e tente novamente.</h1>} />
 
     </Switch>
   );
