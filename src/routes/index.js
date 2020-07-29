@@ -4,6 +4,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { Context } from './context/AuthContext';
 
 import Projects from '../pages/Projects';
+import Profile from '../pages/Profile';
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 import CreateCompany from '../pages/CreateCompany';
@@ -37,6 +38,7 @@ export default function routes() {
       <CustomRoute path="/company/create" component={CreateCompany} exact />
       <CustomRoute path="/project/create" component={CreateProject} exact />
       <CustomRoute path="/projects" component={Projects} exact />
+      <CustomRoute path="/profile" component={Profile} exact />
       <Route path="/web/:id_company/:id" exact component={templateMain} />
       <Route path="/:id_company/:id_web/product/:id" exact component={templateProduct} />
 
