@@ -106,10 +106,18 @@ export const Project = styled.div`
   width: 100vw;
   height: 100vw;
   max-height: 237px;
-  background-color: #f00;
   border-radius: 8px;
   overflow: hidden;
-  
+  cursor: pointer;
+
+  :last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ECECEC;
+    border: 1px solid #707070;
+  }
+
   img {
     height: 100%;
   }

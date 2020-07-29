@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiHome, FiMenu } from 'react-icons/fi';
+import { FiHome, FiMenu, FiPlusCircle } from 'react-icons/fi';
 
 import Logo from '../../assets/whiteLogo.svg';
 
@@ -63,6 +63,10 @@ export default function Index() {
             <div>
               Lorem ipsum dolor sit amet
             </div>
+          </Project>
+
+          <Project>
+            <FiPlusCircle size={50} color="#707070" />
           </Project>
         </ListProjects>
       </Content>
