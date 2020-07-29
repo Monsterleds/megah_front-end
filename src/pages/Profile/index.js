@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { FaCamera } from 'react-icons/fa';
+import { Form, Input } from '@rocketseat/unform';
+
+import api from '../../services/api';
 
 import Header from '../../components/Header';
 
 import {
   Container,
-  InputImage,
   ProfileContainer,
   FormContainer,
   FormWrapper,
@@ -13,12 +15,22 @@ import {
 } from './styles';
 
 function Profile() {
+  const [profile, setProfile] = useState({});
+
+  // Requisição para alterar
+  const handleSubmitForm = useCallback(async (data) => {
+    // await api.put('/rotaX', {
+    //   data,
+    //   profile,
+    // });
+  }, []);
+
   return (
     <Container>
       <Header />
-      <form>
+      <Form onSubmit={(data) => handleSubmitForm(data)}>
         <label htmlFor="batata">
-          <input type="file" id="batata" />
+          <input type="file" id="batata" onChange={(data) => setProfile(data)} />
           <ProfileContainer>
             <div />
             <img src="https://osegredo.com.br/wp-content/uploads/2018/02/pessoas-que-superam-a-depress%C3%A3o-830x450.jpg" alt="" />
@@ -30,28 +42,28 @@ function Profile() {
             <InputsContainer>
               <div>
                 <span>Nome</span>
-                <input placeholder="John doe" />
+                <Input name="name" placeholder="John doe" />
               </div>
               <div>
                 <span>CPF/CNPJ</span>
-                <input placeholder="999.999.999-99" />
+                <Input name="cpf" placeholder="999.999.999-99" />
               </div>
             </InputsContainer>
 
             <InputsContainer>
               <div>
                 <span>Email</span>
-                <input placeholder="johndoe@gmail.com" />
+                <Input name="email" placeholder="johndoe@gmail.com" />
               </div>
               <div>
                 <span>Senha</span>
-                <input placeholder="**********" />
+                <Input name="password" placeholder="**********" />
               </div>
             </InputsContainer>
           </FormWrapper>
         </FormContainer>
         <button type="submit">Atualizar</button>
-      </form>
+      </Form>
     </Container>
   );
 }
