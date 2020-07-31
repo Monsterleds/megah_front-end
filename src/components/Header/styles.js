@@ -3,10 +3,18 @@ import { darken } from 'polished';
 
 export const Container = styled.header`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   height: 64px;
   width: 100%;
+
+  @media only screen and (max-width: 735px) {
+    justify-content: flex-end;
+
+    img {
+      display: none;
+    }
+  }
 
   ul {
     display: flex;
@@ -38,6 +46,9 @@ export const Container = styled.header`
 export const Li = styled.li.attrs((props) => ({
   isSelected: props.isSelected,
 }))`
+  display: flex;
+  align-items:center;
+  justify-content: center;
   cursor: pointer;
   font-size: 16px;
   opacity: 70%;
@@ -55,7 +66,7 @@ export const Li = styled.li.attrs((props) => ({
     }
   `};
 
-  :first-child {
-    margin-right: 48px;
+  & + li {
+    margin-left: 48px;
   }
 `;

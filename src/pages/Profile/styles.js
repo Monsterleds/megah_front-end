@@ -8,7 +8,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   background: url(${Background}) no-repeat;
-  background-size: 100%;
+  background-size: 85%;
+  background-position: top right;
   padding: 0 64px;
   min-height: 100vh;
 

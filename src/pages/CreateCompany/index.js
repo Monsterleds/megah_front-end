@@ -1,22 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Dropzone from 'react-dropzone';
-
 import { MdInsertPhoto } from 'react-icons/md';
 import { Form, Input } from '@rocketseat/unform';
+
+import Header from '../../components/Header';
+
 import history from '../../services/history';
 import api from '../../services/api';
-import {
-  Container, Wrapped, Nav, SubmitButton, SubTitlePhoto, DropContainer,
-} from './styles';
 
 import pencil from '../../assets/pencil.svg';
+
+import {
+  Content, Container, SubmitButton, SubTitlePhoto, DropContainer,
+} from './styles';
+
 
 export default function CreateCompany() {
   const [dataImage, setDataImage] = useState({});
 
   async function handleSubmit(data) {
     try {
-      /** Converte os dados do tipo do input para o multipart/form-data,
+      /** Converte os dados do tipo padrão do file para o multipart/form-data,
        *  assim tornando a adição de imagens possível */
       const fd = new FormData();
 
@@ -70,20 +74,9 @@ export default function CreateCompany() {
   }
 
   return (
-    <Wrapped>
-      <Nav>
-        <a id="logo">g</a>
-        <ul>
-          <a>Inicio</a>
-          <a>Projetos</a>
-          <a>
-            username
-            <img src="https://www.tenhomaisdiscosqueamigos.com/wp-content/uploads/2017/03/Avatar-1280x720.jpg" />
-          </a>
-        </ul>
-      </Nav>
-
-      <Container>
+    <Container>
+      <Header />
+      <Content>
         <Form onSubmit={handleSubmit}>
           <h1>Crie sua marca</h1>
           <div>
@@ -120,9 +113,7 @@ export default function CreateCompany() {
             Enviar
           </SubmitButton>
         </Form>
-
-      </Container>
-
-    </Wrapped>
+      </Content>
+    </Container>
   );
 }

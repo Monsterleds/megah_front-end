@@ -7,6 +7,10 @@ export const Container = styled.div`
   background: url(${Background}) no-repeat;
   background-size: 100%;
   min-height: 100vh;
+
+  header > img {
+    visibility: hidden;
+  }
 `;
 
 export const Content = styled.div`
@@ -18,6 +22,7 @@ export const Content = styled.div`
 
   h1 {
     color: #fff;
+    font-size: 30px;
 
     @media only screen and (max-width: 735px) {
       color: #A9A9A9;
@@ -35,6 +40,7 @@ export const Menu = styled.div.attrs((props) => ({
   height: 100vh;
   background-color: #1A469F;
   padding: 0px 16px;
+  z-index: 10;
 
   @media only screen and (max-width: 735px) {
     position: fixed;
@@ -100,6 +106,7 @@ export const ListProjects = styled.div`
 `;
 
 export const Project = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -115,8 +122,25 @@ export const Project = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ECECEC;
-    border: 1px solid #707070;
+    background-color: #002777;
+
+    svg {
+      transition: 0.2s;
+    }
+
+    :hover {
+      svg {
+        width: 60px;
+        height: auto;
+      }
+    }
+
+    a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
   }
 
   img {
