@@ -90,6 +90,7 @@ export const FormContainer = styled.div`
                 width: 40px;
                 border-radius: 50%;
                 border: 0;
+                transition: 0.2s;
 
                 & + button {
                     margin-left: 8px;
@@ -97,14 +98,26 @@ export const FormContainer = styled.div`
 
                 :nth-of-type(1) {
                     background-color: #FF372C;
+
+                    :hover {
+                        background-color: ${darken(0.2, '#FF372C')};
+                    }
                 }
 
                 :nth-of-type(2) {
                     background-color: #5961FF;
+
+                    :hover {
+                        background-color: ${darken(0.2, '#5961FF')};
+                    }
                 }
 
                 :nth-of-type(3) {
                     background-color: #55FF48;
+
+                    :hover {
+                        background-color: ${darken(0.2, '#55FF48')};
+                    }
                 }
             }
         }

@@ -1,8 +1,9 @@
-import React, { useState, useCallback } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import { Form, Input } from '@rocketseat/unform';
-
 import { MdEmail, MdPhone } from 'react-icons/md';
+
+import useHistory from '../../services/history';
+import api from '../../services/api';
 
 import Header from '../../components/Header';
 
@@ -15,9 +16,18 @@ import {
 export default function CreateProject() {
   const [color, setColor] = useState('');
 
-  const handleSubmit = useCallback((data) => {
-    console.log(data);
-  }, []);
+  const handleSubmit = async (data) => {
+    try {
+      await api.post('/name_of_route', {
+        data,
+        color,
+      });
+
+      useHistory.push('/projects');
+    } catch (err) {
+      alert('deu merda');
+    }
+  };
 
   return (
     <Container>
@@ -35,9 +45,9 @@ export default function CreateProject() {
           </label>
           <div>
             <p>Cor Principal:</p>
-            <button type="button" />
-            <button type="button" />
-            <button type="button" />
+            <button type="button" onClick={() => setColor('red')} />
+            <button type="button" onClick={() => setColor('blue')} />
+            <button type="button" onClick={() => setColor('green')} />
           </div>
           <SubmitButton type="submit">Enviar</SubmitButton>
         </Form>
