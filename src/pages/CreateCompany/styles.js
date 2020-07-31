@@ -9,48 +9,16 @@ const dragReject = css`
   border-color: #e57878;
 `;
 
-export const Nav = styled.div`
-    width: 100%;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    #logo {
-        @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
-        font-family: 'Pacifico', cursive;
-        font-size: 40px;
-        margin: 2% 8%;
-        color: #50D1F1;
-    }
-    ul {
-        display:flex; 
-        align-items: center;
-    }
-    a {
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 50px;
-        color:white;
-        font-family: roboto, bold;
-    }
-    img{
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-right: 25px;
-        margin-left: 10px;
-    }
-`;
-
-export const Wrapped = styled.div`
+export const Container = styled.div`
     height: 100vh;  
     background-image: url(${backgroundImage});
     background-size: 85%;
     background-position: right top;
     background-repeat: no-repeat;
+    padding: 0 64px;
 `;
 
-export const Container = styled.div`
+export const Content = styled.div`
     opacity: 1;   
     display: flex;
     align-items: center;

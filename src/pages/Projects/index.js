@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FiHome, FiMenu, FiPlusCircle } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 import Logo from '../../assets/whiteLogo.svg';
 
@@ -66,7 +67,8 @@ export default function Index() {
           </Project>
 
           <Project>
-            <FiPlusCircle size={50} color="#707070" />
+            <Link to="/project/create" />
+            <FiPlusCircle size={50} color="#fff" />
           </Project>
         </ListProjects>
       </Content>
