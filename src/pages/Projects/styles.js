@@ -8,8 +8,8 @@ export const Container = styled.div`
   background-size: 100%;
   min-height: 100vh;
 
-  header > img {
-    visibility: hidden;
+  header > a > img {
+    display: none;
   }
 `;
 
@@ -37,7 +37,8 @@ export const Menu = styled.div.attrs((props) => ({
   flex-direction: column;
   align-items: center;
   width: 360px;
-  height: 100vh;
+  min-height: 100vh;
+  height: 1fr;
   background-color: #1A469F;
   padding: 0px 16px;
   z-index: 10;
