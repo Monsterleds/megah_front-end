@@ -10,7 +10,7 @@ function Header() {
 
   return (
     <Container>
-      <img src={logo} alt="logo" />
+      <Link to="/projects"><img src={logo} alt="logo" /></Link>
       <ul>
         <Li isSelected={urlAtual === 'projects' && true}><Link to="/projects">Projetos</Link></Li>
         <Li isSelected={urlAtual === 'profile' && true}>
