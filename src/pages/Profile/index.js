@@ -57,7 +57,7 @@ function Profile() {
               </div>
               <div>
                 <span>Senha</span>
-                <Input name="password" placeholder="**********" />
+                <Input type="password" name="password" placeholder="**********" />
               </div>
             </InputsContainer>
           </FormWrapper>
